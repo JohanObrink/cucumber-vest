@@ -1,0 +1,494 @@
+[
+  {
+    "description": "  A user should be able to authenticate via SAML SSO",
+    "keyword": "Feature",
+    "name": "Authentication",
+    "line": 1,
+    "id": "authentication",
+    "tags": [],
+    "uri": "features/auth.feature",
+    "elements": [
+      {
+        "id": "authentication;not-logged-in",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Not logged in",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/setup.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "name",
+                      "role"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "johanobrink",
+                      "Johan Öbrink",
+                      "user"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "hal9000",
+                      "HAL 9000",
+                      "superadmin"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "The following users exist in the IDP",
+            "match": {
+              "location": "step_definitions/auth.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 12,
+            "name": "I am not logged in",
+            "match": {
+              "location": "step_definitions/auth.steps.js:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 13,
+            "name": "I visit the start page",
+            "match": {
+              "location": "step_definitions/auth.steps.js:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3181000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 14,
+            "name": "I should see a link to log in",
+            "match": {
+              "location": "step_definitions/auth.steps.js:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 52000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/setup.js:38"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "authentication;login-as-user",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Login as user",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/setup.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "name",
+                      "role"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "johanobrink",
+                      "Johan Öbrink",
+                      "user"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "hal9000",
+                      "HAL 9000",
+                      "superadmin"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "The following users exist in the IDP",
+            "match": {
+              "location": "step_definitions/auth.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 17,
+            "name": "I am logged in as \"johanobrink\"",
+            "match": {
+              "location": "step_definitions/auth.steps.js:16"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 18,
+            "name": "I authenticate via the IDP",
+            "match": {
+              "location": "step_definitions/auth.steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 229000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "I should see the welcome page",
+            "match": {
+              "location": "step_definitions/auth.steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "The greeting should say \"Welcome Johan Öbrink!\"",
+            "match": {
+              "location": "step_definitions/auth.steps.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "There should be no admin menu",
+            "match": {
+              "location": "step_definitions/auth.steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/setup.js:38"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "authentication;login-as-admin",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Login as admin",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/setup.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "name",
+                      "role"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "johanobrink",
+                      "Johan Öbrink",
+                      "user"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "hal9000",
+                      "HAL 9000",
+                      "superadmin"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "The following users exist in the IDP",
+            "match": {
+              "location": "step_definitions/auth.steps.js:8"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 24,
+            "name": "I am logged in as \"hal9000\"",
+            "match": {
+              "location": "step_definitions/auth.steps.js:16"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I authenticate via the IDP",
+            "match": {
+              "location": "step_definitions/auth.steps.js:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 168000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 26,
+            "name": "I should see the welcome page",
+            "match": {
+              "location": "step_definitions/auth.steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "The greeting should say \"Welcome HAL 9000!\"",
+            "match": {
+              "location": "step_definitions/auth.steps.js:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 44000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "There should be an admin menu",
+            "match": {
+              "location": "step_definitions/auth.steps.js:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/setup.js:38"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "authentication;logout",
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Logout",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/setup.js:33"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "id",
+                      "name",
+                      "role"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "johanobrink",
+                      "Johan Öbrink",
+                      "user"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "hal9000",
+                      "HAL 9000",
+                      "superadmin"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "The following users exist in the IDP",
+            "match": {
+              "location": "step_definitions/auth.steps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 31,
+            "name": "I am logged in as \"johanobrink\"",
+            "match": {
+              "location": "step_definitions/auth.steps.js:16"
+            },
+            "result": {
+              "status": "passed"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "I log out",
+            "match": {
+              "location": "step_definitions/auth.steps.js:29"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 115000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 33,
+            "name": "I should see the start page",
+            "match": {
+              "location": "step_definitions/auth.steps.js:37"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "step_definitions/setup.js:38"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

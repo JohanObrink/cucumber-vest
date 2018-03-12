@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    if (user)
+      nav
+        ul
+          if (user.role === 'superadmin')
+            li.admin
+              a(href="/admin") admin
+          li
+            a(href="/logout") logout
+    block content

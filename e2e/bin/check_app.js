@@ -7,11 +7,11 @@ const wait = (delay) => new Promise(resolve => { setTimeout(resolve, delay) })
 
 const timeout = (delay = 90000) => wait(delay)
   .then(() => {
-    process.stderr.write(`Connection attempt timed out after ${delay} ms\n`)
-    return Promise.reject()
+    return Promise.reject(`Connection attempt timed out after ${delay} ms\n`)
   })
 
 const checkApp = (delay = 1000) => {
+  return Promise.resolve()
   process.stdout.write(`Attempting to connect to ${url}\n`)
   return fetch(url)
     .then(res => res.status >= 200 && res.status < 300 ? res.json() : Promise.reject(res))
@@ -23,7 +23,7 @@ const checkApp = (delay = 1000) => {
 
 const start = () => Promise.race([checkApp(), timeout()])
   .then(() => 0)
-  .catch(() => 1)
+  .catch(info => !process.stderr.write(info) || 1)
   .then(code => process.exit(code))
 
 start()

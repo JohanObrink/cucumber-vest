@@ -4,11 +4,9 @@ Feature: Authentication
 
   Background:
   Given The following users exist in the IDP
-    | id    | name          | role        |
-    | 12345 | Johan Öbrink  | user        |
-    | 67890 | HAL 9000      | superadmin  |
-  
-
+    | id          | name          | role        |
+    | johanobrink | Johan Öbrink  | user        |
+    | hal9000     | HAL 9000      | superadmin  |
   
   Scenario: Not logged in
     Given I am not logged in
@@ -16,15 +14,20 @@ Feature: Authentication
     Then I should see a link to log in
   
   Scenario: Login as user
-    Given I am logged in as Johan Öbrink
+    Given I am logged in as "johanobrink"
     When I authenticate via the IDP
     Then I should see the welcome page
       And The greeting should say "Welcome Johan Öbrink!"
       And There should be no admin menu
   
   Scenario: Login as admin
-    Given I am logged in as HAL 9000
+    Given I am logged in as "hal9000"
     When I authenticate via the IDP
     Then I should see the welcome page
       And The greeting should say "Welcome HAL 9000!"
       And There should be an admin menu
+
+  Scenario: Logout
+    Given I am logged in as "johanobrink"
+    When I log out
+    Then I should see the start page

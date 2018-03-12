@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const {Client} = require('pg')
-const config = require('../lib/adapters/config')
+const config = require('../config').get('postgres')
 
 function checkDb () {
   return new Promise((resolve, reject) => {
@@ -9,8 +9,8 @@ function checkDb () {
 }
 
 function connect (resolve, reject, timeout) {
-  process.stdout.write(`Trying to connect to db...\n`)
-  const client = new Client(config.postgres)
+  process.stdout.write(`Trying to connect to ${JSON.stringify(config, null, 2)}\n`)
+  const client = new Client(config)
   client.once('error', err => {
     process.stderr.write(`${err}\n${err.stack}\n\n`)
   })

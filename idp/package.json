@@ -9,7 +9,7 @@
   "author": "Johan Öbrink <johan.obrink@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "fake-sso-idp": "^0.1.4"
+    "fake-sso-idp": "^0.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.17.1"
