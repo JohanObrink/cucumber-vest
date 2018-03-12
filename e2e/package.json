@@ -1,0 +1,21 @@
+{
+  "name": "e2e",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "env $(cat .env) node bin/check_app.js && env $(cat .env) cucumber-js features/**/*.feature",
+    "start": "node bin/check_app.js && cucumber-js features/**/*.feature"
+  },
+  "author": "Johan Öbrink <johan.obrink@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "chromedriver": "^2.36.0",
+    "cucumber": "^4.0.0",
+    "fake-sso-idp": "^0.1.4",
+    "nconf": "^0.10.0",
+    "node-fetch": "^2.1.1",
+    "node-pg-migrate": "^2.25.0",
+    "pg-promise": "^8.1.1",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  }
+}

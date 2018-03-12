@@ -1,0 +1,17 @@
+{
+  "name": "idp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "env $(cat .env) nodemon server.js"
+  },
+  "author": "Johan Öbrink <johan.obrink@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fake-sso-idp": "^0.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.1"
+  }
+}

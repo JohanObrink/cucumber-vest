@@ -1,0 +1,21 @@
+version: '3.4'
+services:
+  postgres:
+    image: postgres:10.2
+    environment:
+      - POSTGRES_DB=app_db
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+    ports:
+      - 5432:5432
+  idp:
+    build:
+      context: ./idp
+      dockerfile: DOCKERFILE
+    environment:
+      - HOST=http://localhost
+      - PORT=4000
+      - SP_DESTINATION=http://localhost:3000/saml/callback
+      - SP_METADATA=http://localhost:3000/saml/metadata.xml
+    ports:
+      - 4000:4000
