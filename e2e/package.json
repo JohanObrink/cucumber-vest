@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "env $(cat .env) node bin/check_app.js && env $(cat .env) nightwatch",
-    "start": "node bin/check_app.js && cucumber-js features/**/*.feature"
+    "start": "node bin/check_app.js && nightwatch"
   },
   "author": "Johan Öbrink <johan.obrink@gmail.com>",
   "license": "MIT",
