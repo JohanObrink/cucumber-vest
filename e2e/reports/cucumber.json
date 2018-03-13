@@ -75,8 +75,7 @@
               "location": "step_definitions/auth.steps.js:12"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -89,7 +88,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3181000000
+              "duration": 2618000000
             }
           },
           {
@@ -98,11 +97,11 @@
             "line": 14,
             "name": "I should see a link to log in",
             "match": {
-              "location": "step_definitions/auth.steps.js:33"
+              "location": "step_definitions/auth.steps.js:36"
             },
             "result": {
               "status": "passed",
-              "duration": 52000000
+              "duration": 53000000
             }
           },
           {
@@ -112,7 +111,8 @@
               "location": "step_definitions/setup.js:38"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -132,7 +132,8 @@
               "location": "step_definitions/setup.js:33"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -170,8 +171,7 @@
               "location": "step_definitions/auth.steps.js:8"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -183,7 +183,8 @@
               "location": "step_definitions/auth.steps.js:16"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -192,11 +193,11 @@
             "line": 18,
             "name": "I authenticate via the IDP",
             "match": {
-              "location": "step_definitions/auth.steps.js:25"
+              "location": "step_definitions/auth.steps.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 229000000
+              "duration": 234000000
             }
           },
           {
@@ -205,11 +206,11 @@
             "line": 19,
             "name": "I should see the welcome page",
             "match": {
-              "location": "step_definitions/auth.steps.js:37"
+              "location": "step_definitions/auth.steps.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 12000000
+              "duration": 11000000
             }
           },
           {
@@ -218,7 +219,7 @@
             "line": 20,
             "name": "The greeting should say \"Welcome Johan Öbrink!\"",
             "match": {
-              "location": "step_definitions/auth.steps.js:43"
+              "location": "step_definitions/auth.steps.js:48"
             },
             "result": {
               "status": "passed",
@@ -231,11 +232,11 @@
             "line": 21,
             "name": "There should be no admin menu",
             "match": {
-              "location": "step_definitions/auth.steps.js:47"
+              "location": "step_definitions/auth.steps.js:53"
             },
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 27000000
             }
           },
           {
@@ -324,11 +325,11 @@
             "line": 25,
             "name": "I authenticate via the IDP",
             "match": {
-              "location": "step_definitions/auth.steps.js:25"
+              "location": "step_definitions/auth.steps.js:26"
             },
             "result": {
               "status": "passed",
-              "duration": 168000000
+              "duration": 188000000
             }
           },
           {
@@ -337,11 +338,11 @@
             "line": 26,
             "name": "I should see the welcome page",
             "match": {
-              "location": "step_definitions/auth.steps.js:37"
+              "location": "step_definitions/auth.steps.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 9000000
+              "duration": 10000000
             }
           },
           {
@@ -350,7 +351,7 @@
             "line": 27,
             "name": "The greeting should say \"Welcome HAL 9000!\"",
             "match": {
-              "location": "step_definitions/auth.steps.js:43"
+              "location": "step_definitions/auth.steps.js:48"
             },
             "result": {
               "status": "passed",
@@ -363,7 +364,7 @@
             "line": 28,
             "name": "There should be an admin menu",
             "match": {
-              "location": "step_definitions/auth.steps.js:47"
+              "location": "step_definitions/auth.steps.js:53"
             },
             "result": {
               "status": "passed",
@@ -448,7 +449,8 @@
               "location": "step_definitions/auth.steps.js:16"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -457,11 +459,11 @@
             "line": 32,
             "name": "I log out",
             "match": {
-              "location": "step_definitions/auth.steps.js:29"
+              "location": "step_definitions/auth.steps.js:31"
             },
             "result": {
               "status": "passed",
-              "duration": 115000000
+              "duration": 106000000
             }
           },
           {
@@ -470,11 +472,11 @@
             "line": 33,
             "name": "I should see the start page",
             "match": {
-              "location": "step_definitions/auth.steps.js:37"
+              "location": "step_definitions/auth.steps.js:41"
             },
             "result": {
               "status": "passed",
-              "duration": 8000000
+              "duration": 9000000
             }
           },
           {
