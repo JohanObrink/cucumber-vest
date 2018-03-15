@@ -8,7 +8,6 @@
   "author": "Johan Öbrink <johan.obrink@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "chai": "^4.1.2",
     "chromedriver": "^2.36.0",
     "cucumber": "^4.0.0",
     "cucumber-pretty": "^1.4.0",

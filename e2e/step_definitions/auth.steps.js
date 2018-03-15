@@ -1,6 +1,5 @@
 const {Given, When, Then} = require('cucumber')
 const {client: browser} = require('nightwatch-cucumber')
-const {expect} = require('chai')
 const {insertUsers, getPage} = require('./helpers')
 
 const wait = (delay) => new Promise(resolve => setTimeout(resolve, delay))
