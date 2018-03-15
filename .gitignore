@@ -61,3 +61,5 @@ typings/
 .DS_Store
 .vscode/
 
+# reports
+e2e/reports
